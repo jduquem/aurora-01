@@ -27,4 +27,4 @@ elif opcion == "3":
 elif opcion == "4":
     print("Salir")
 else:
-    print("Opción no válida")
+    print("Opción no válida") 
