@@ -1,12 +1,17 @@
 import os
 
 
-print("="*30 + "\n" + "=       MENÚ PRINCIPAL       =" + "\n" + "="*30)
-print("=" + "   1. Opción 1" + "              =")
-print("=" + "   2. Opción 2" + "              =")
-print("=" + "   3. Opción 3" + "              =")
-print("=" + "   4. Salir" + "                 =")
-print("="*30)
+print("="*32 + "\n" + "=       MENÚ PRINCIPAL         =" + "\n" + "="*32)
+print("=" + " Este menú fue creado para    =")
+print("=" + " facilitarte la manera de     =")
+print("=" + " como utilizar la aplicación  =")
+print("="*32)
+print("=" + "   1. Opción 1" + "                =")
+print("=" + "   2. Opción 2" + "                =")
+print("=" + "   3. Opción 3" + "                =")
+print("=" + "   4. Salir" + "                   =")
+print("="*32)
+
 
 def listar_archivos_csv(ruta):
     for raiz, _, archivos in os.walk(ruta):
