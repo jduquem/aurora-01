@@ -14,6 +14,9 @@ print("="*32)
 
 
 def listar_archivos_csv(ruta):
+    """
+    Función que lista los archivos CSV de una carpeta
+    """
     for raiz, _, archivos in os.walk(ruta):
         for archivo in archivos:
             if archivo.endswith(".csv"):
