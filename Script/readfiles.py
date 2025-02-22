@@ -52,6 +52,44 @@ def crear_carpetas_y_archivos(n, ruta_base="./output"):
     
     print(f"Se crearon las carpetas y archivos en: {ruta_base}")
 
+def crear_evento():
+    """
+    Función que crea un evento
+    autor: José Duque
+    version: 1.0
+    return: dict con los datos del evento
+    """
+    fecha = input("Ingrese la fecha del evento: ")
+    nombre = input("Ingrese el nombre del evento: ")
+    categoria = input("Ingrese la categoría del evento: ")
+    monto = input("Ingrese el monto del evento: ")
+    dueño = input("Ingrese el dueño del evento: ")
+    cuenta = input("Ingrese la cuenta del evento: ")
+
+    evento = {
+        "fecha": fecha,
+        "nombre": nombre,
+        "categoria": categoria,
+        "monto": monto,
+        "dueño": dueño,
+        "cuenta": cuenta
+    }
+    print(evento)
+    return evento
+
+def crear_n_eventos(n):
+    """
+    Función que crea N eventos
+    autor: José Duque
+    version: 1.0
+    return: lista de eventos
+    """
+    eventos = []
+    for i in range(n):
+        evento = crear_evento()
+        eventos.append(evento)
+    return eventos
+
 if opcion == "1":
     listar_archivos_csv(ruta_carpeta)
 elif opcion == "2":
