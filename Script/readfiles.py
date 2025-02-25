@@ -6,15 +6,16 @@ def menu():
     print("=" + " facilitarte la manera de     =")
     print("=" + " como utilizar la aplicación  =")
     print("="*32)
-    print("=" + "   1. Opción 1" + "                =")
+    print("=" + "   1. Listar archivos csv" + "     =")
     print("=" + "   2. Opción 2" + "                =")
     print("=" + "   3. Opción 3" + "                =")
     print("=" + "   4. Salir" + "                   =")
     print("="*32)
     opcion = input("Seleccione una opción: ")
-    return opcion
+    return str(opcion)
 
 def listar_archivos_csv(ruta):
+    print("listar archivos csv")
     for raiz, _, archivos in os.walk(ruta):
         for archivo in archivos:
             if archivo.endswith(".csv"):
@@ -23,7 +24,7 @@ def listar_archivos_csv(ruta):
 def main():
     ruta_carpeta = r"C:\Users\jose.duque\OneDrive - arus.com.co\Documentos\readFile"
     opcion = 100
-    while opcion > 0:
+    while opcion != "4":
         opcion = menu()
         if opcion == "1":
             listar_archivos_csv(ruta_carpeta)
